@@ -100,39 +100,5 @@ void Texture::save(std::ostream *dst){
 	dst->write(buffer, 2 * size);
 	delete[] buffer;
 	cerr << "saved texture" << endl;
-	
-	/*int *equality = new int[size];
-	equality[size - 1] = 0;
-	CHAR_INFO *now = NULL, *last = &pixels[size - 1];
-	for(int ix = size - 2; i >= 0; --i){
-		now = &pixels[ix];
-		if(now->Attributes == last->Attributes && now->Char.AsciiChar == last->Char.Attributes) equality[ix] = equality[ix + 1] + 1;
-		last = now;
-	}
-	bool state = false;
-	for(int ix = 0; ix < size; ++ix){
-		if(state){
-			if(equality[ix] == 0) state = false;
-			equality[ix] = 1;
-		}
-		else{
-			if(equality[ix] >= 2){
-				++equality[ix];
-				state = true;
-			}
-			else equality[ix] = 0;
-		}
-	}
-	char *buffer = new char[2 * size];
-	int len = 0, ix = 0, n;
-	while(ix < size){
-		n = equality[ix];
-		if(n > 0){
-			buffer[len++] = 1;
-			buffer[len++] = (n >> 8) & 0xFF;
-			buffer[len++] = n & 0xFF;
-			buffer[len++] = 
-		}
-	}*/
 }
 
